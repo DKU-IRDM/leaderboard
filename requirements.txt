@@ -12,3 +12,4 @@ sqlparse==0.5.5
 tablib==3.9.0
 types-pyyaml==6.0.12.20250915
 typing-extensions==4.15.0
+whitenoise==6.12.0
