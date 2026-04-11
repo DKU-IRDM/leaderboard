@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block style %}
+  <style>
+    #container {
+      padding-top: 20px;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+  </style>
+{% endblock %}
+{% block body %}
+  <div id="container" class="container">
+    <h4 class="center-align">DB 과제3 리더보드</h4>
+    <table class="highlight centered">
+      <thead>
+        <tr>
+          <th>순위</th>
+          <th>학번</th>
+          <th>점수(NDCG@100)</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in rows %}
+          <tr>
+            <td>{{ row.rank }}</td>
+            <td>{{ row.sid }}</td>
+            <td>{{ row.score }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}
