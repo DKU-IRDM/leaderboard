@@ -73,6 +73,7 @@ def web_26SpDbA2_view(request):
             'sid': star(record.sid, 4),
             'similarity': record.similarity,
             'latency': record.latency,
+            'updated_at': record.updated_at,
         })
     return render(request, 'views/26SpDbA2.html', {
         'rows': rows,
@@ -97,6 +98,7 @@ def web_26SpDbA3_view(request):
             'rank': record.rank,
             'sid': star(record.sid, 4),
             'score': record.score,
+            'updated_at': record.updated_at,
         })
     return render(request, 'views/26SpDbA3.html', {
         'rows': rows,

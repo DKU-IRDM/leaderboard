@@ -18,6 +18,7 @@
           <th>학번</th>
           <th>유사도(%)</th>
           <th>지연시간(ms)</th>
+          <th>업데이트 시간</th>
         </tr>
       </thead>
       <tbody>
@@ -27,6 +28,7 @@
             <td>{{ row.sid }}</td>
             <td>{{ row.similarity }}</td>
             <td>{{ row.latency }}</td>
+            <td>{{ row.updated_at|date:'m/d H:i' }}</td>
           </tr>
         {% endfor %}
       </tbody>
