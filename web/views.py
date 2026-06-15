@@ -48,7 +48,10 @@ def api_records_26SpDbA3_view(request):
     sid = request.POST.get('sid')
     score = float(request.POST.get('score'))
     record, _ = Record26SpDbA3.objects.get_or_create(sid=sid)
-    record.score = max(record.score, score)
+    if record.score is None:
+        record.score = score
+    else:
+        record.score = max(record.score, score)
     record.save()
     return JsonResponse({}, status=200)
 
